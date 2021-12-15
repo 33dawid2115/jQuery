@@ -5,8 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>zad4 - jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        div{
+            background-color: bisque;
+            font-size: 24pt;
+            text-align: center;
+            padding: 20px;
+            border: 4px solid purple;
+            margin-right: 99%;
+        }
+    </style>
 </head>
-<body>
+<body bgcolor="gray">
     
+    <div></div>
+    <script type="text/javascript">
+        $("div").hover(function(){
+            $(this).animate({width:"+=100px"});
+        },
+        function(){
+            $(this).animate({width:"-=100px"});
+        });
+    </script>
+
 </body>
 </html>
