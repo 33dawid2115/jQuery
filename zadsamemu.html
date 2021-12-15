@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>elo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        html,body{
+            padding: 0;
+            margin: 0;
+        }
+
+        #box1{
+            width: 45%;
+            background-color: bisque;
+            height: 100%;
+            text-align: center;
+        }
+
+        #box2{
+            width: 55%;
+            background-color: aqua;
+            height: 30%;
+            text-align: right;
+            padding-top: 200px;
+            margin-left: 45%;
+            text-align: center;
+            font-size: 36pt;
+            margin-top: -11%;
+            
+        }
+
+        #box3{
+            width: 55%;
+            background-color: crimson;
+            margin-left: 45%;
+            padding-top: 386px;
+            text-align: center;
+        }
+
+    </style>
+
+    <script type="text/javascript">
+
+        $(function(){
+            $("#dodaj").on("click" , function(){
+                var val = $("input").val();
+                if(val != ""){
+                    var element = $("<li></li>").text(val);
+                    $(element).append("<button class='mojaklasa'>❌</button>");
+                    $("#lista").append(element);
+                    $("input").val("");
+                    $(".mojaklasa").on("click" , function(){
+                        $(this).parent().remove();
+                    });
+                 }
+                });
+             });
+////////////////////////////////////////////////////////////////////////////////////////////////////
+        $(document).ready(function(){
+            
+                $("#animacja").click(function(){
+                    for(let i=0; i<=100; i++){
+                        $("#paragraf").fadeIn(500);
+                        $("#paragraf").fadeOut(1000);
+                        $("#paragraf").animate({width:"+=100px"});
+                        $("#paragraf").animate({width:"-=100px"});
+                }
+                });
+            });
+
+
+    
+
+    </script>
+</head>
+<body bgcolor=gray>
+    
+    <div id="box1">
+
+        <input type="text" placeholder="Plan dnia">
+        <button id="dodaj"> ➕ </button>
+        
+        <ol id="lista"></ol>
+    
+    </div>
+<!-------------------------------------------------------------------------------------------------------------------->
+    <div id="box2">
+
+        <p id="paragraf">
+            ❤
+            </p>
+            <button id="animacja">KLIKAJ MNIE</button><br>
+
+    </div>
+<!-------------------------------------------------------------------------------------------------------------------->
+    <div id="box3">
+
+
+    
+    </div>
+
+</body>
+</html>
