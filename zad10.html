@@ -8,16 +8,51 @@
     <title>jQuery</title>
     <style>
 
+        h1{
+            color: purple;
+            font-family: initial;
+        }
+
+        #lista{
+            margin-left: 5px;
+            cursor: pointer;
+            color: crimson;
+            text-decoration: none;
+            list-style: none;
+        }
+
     </style>
     <script>
+$(function(){
+        $("#dodaj").on("click" , function(){
+            var val = $("input").val();
+            if(val != ""){
+                var element = $("<li></li>").text(val);
+                $(element).append("<button class='mojaklasa'>❌</button>");
+                $("#lista").append(element);
+                $("input").val("");
+                $(".mojaklasa").on("click" , function(){
+                    $(this).parent().remove();
+                });
+            }else{
+                alert("NIE MOZNA DODAC PUSTEGO PUNKTU DO LISTY");
+            }
+});
 
+        });
+
+      
         
-
     </script>
 </head>
-<body>
+<body bgcolor="gray">
     
 
+    <h1>Dodawnia elementow do listy</h1>
+<input type="text" placeholder="Nowy punk listy">
+<button id="dodaj"> ➕ </button>
+
+<ol id="lista"></ol>
 
 </body>
 </html>
