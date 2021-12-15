@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>jquery</title>
+    <style>
+        #box{
+            display: none;
+            border: 4px solid purple;
+            width: 200px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            padding: 15px
+        }
+    </style>
+    <script type="text/javascript">
+
+        $(function(){
+            $("#button1").click(function(){
+                $("#box").show();
+            });
+            $("#button2").click(function(){
+                $("#box").hide();
+            });
+        });
+
+    </script>
+</head>
+<body>
+    
+    <button id="button1">pokaz</button>
+    <button id="button2">zniknij</button>
+    <div id="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. In reiciendis unde autem perspiciatis voluptatem nostrum laborum tempora iusto voluptatum. Molestiae alias perferendis pariatur ab similique dolorum eos incidunt sint nam!</div>
+
+</body>
+</html>
