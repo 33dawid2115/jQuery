@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#przycisk1").click(function(){
+                $("#napis1").text("minceraft to jest to");
+            });
+            $("#przycisk2").click(function(){
+                $("#napis2").html("minceraft zyciem");
+            });
+            $("#przycisk3").click(function(){
+                $("#napis3").val("rozjebe sie to nie lata");
+            });
+            
+        });
+    </script>
+</head>
+<body bgcolor="gray">
+    
+    <p id="napis1">
+        dupa1
+    </p>  
+    <p id="napis2">
+        dupa2
+    </p>
+    <p>
+        pole: <input type="text" id="napis3" placeholder="halo many">
+    </p>
+    <button id="przycisk1">wyslij text</button>
+    <button id="przycisk2">wyslij html</button>
+    <button id="przycisk3">wyslij wartosc value</button>
+
+</body>
+</html>
