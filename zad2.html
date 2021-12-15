@@ -6,10 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>zad2 - jquery</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+            $("#przycisk1").click(function(){
+                var szerokosc = $(".napis").width();
+                var wysokosc = $(".napis").height();
+
+                $("#info").html("szerokosc: " + szerokosc + " | " +"wysokosc: " + wysokosc);
+            });
+        });
+
+    </script>
 </head>
 <body>
-    
-    
+    <div id="info"></div>
+
+    <div id="przycisk1">
+        <br><br>   sprawdz wysokosc i szerokosc obiektu <br><br>
+    </div>
+
+    <div class="napis">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus dolorum temporibus, optio saepe modi dignissimos amet quisquam, maiores sit aliquam praesentium id animi, commodi dolores explicabo! Quos maiores dolore nemo!
+    </div>
 
 </body>
 </html>
