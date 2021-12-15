@@ -10,6 +10,7 @@
         html,body{
             padding: 0;
             margin: 0;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
         }
 
         #box1{
@@ -23,9 +24,9 @@
             width: 55%;
             background-color: aqua;
             text-align: right;
-            padding-top: 200px;
+            padding-top: 90px;
             
-            font-size: 36pt;
+            font-size: 34pt;
 
 
             margin-top: -11%;
@@ -38,11 +39,15 @@
             width: 55%;
             background-color: gray;
             margin-left: 45%;
-            padding-top: 440px;
+            padding-top: 150px;
             text-align: center;
-            margin-bottom: 10%;
+            margin-bottom: -12%;
+            margin-top: -3%;
+            min-height: 299px;
+            font-size: 15pt;
         }
         #wynik{
+            margin-top: 6%;
             border: 2px solid purple;
 
         } 
@@ -68,7 +73,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 $(document).ready(function(){
             
-    $("#animacja").click(function(){
+    $("#box2").hover(function(){
         for(let i=0; i<=100; i++){
             $("#paragraf").fadeIn(2000);
             $("#paragraf").fadeOut(1000);
@@ -76,15 +81,52 @@ $(document).ready(function(){
 
         }   
     
-    $("#animacja").click(function(){
+    $("#box2").hover(function(){
         for(let i=0; i<=100; i++){
             $("#paragraf1").fadeIn(1000);
             $("#paragraf1").fadeOut(2000);
 
         
-        }      
+        }    
+        $("#box2").hover(function(){
+            for(let i=0; i<=100; i++){
+                $("#paragraf3").fadeIn(2000);
+                $("#paragraf3").fadeOut(1000);
+    
+    
+                }     
+            });
         });
     });
+});
+$(function () {
+    $("#Dodaj1").on("click", function () {
+        var wartosc1 = $("#input1").val();
+        var wartosc2 = $("#input2").val();
+        var suma = parseInt(wartosc1) + parseInt(wartosc2);
+        console.log(suma);
+        $("#wynik").html("wynik: " + suma);
+    });
+});
+
+
+$(function () {
+$("#Odejmij").on("click", function () {
+    var wartosc1 = $("#input1").val();
+    var wartosc2 = $("#input2").val();
+    var suma = parseInt(wartosc1) - parseInt(wartosc2);
+    console.log(suma);
+    $("#wynik").html("wynik: " + suma);
+});
+});
+$(function () {
+$("#Pomnoz").on("click", function () {
+    var wartosc1 = $("#input1").val();
+    var wartosc2 = $("#input2").val();
+    var suma = parseInt(wartosc1) * parseInt(wartosc2);
+    console.log(suma);
+    $("#wynik").html("wynik: " + suma);
+});
 });
 
     </script>
@@ -107,11 +149,16 @@ $(document).ready(function(){
                 <p id="paragraf">
                     ❤
                     </p>
-                        <button id="animacja">_________________</button><br>
+                        
               
                     <p id="paragraf1">
-                        ❤
-                        </p>
+                        ❤❤
+                    </p>
+
+                    <p id="paragraf3">
+                        ❤❤❤
+                    </p>
+
 
             
 
@@ -120,8 +167,11 @@ $(document).ready(function(){
     <div id="box3">
 
 
-        <input type="number" placeholder=" podaj liczbe1" id="input1">
-        <input type="number" placeholder=" podaj liczbe2" id="input2">
+        <p>Kalkulator</p>
+        <input type="number" placeholder="podaj liczbe nr1" id="input1">
+        <input type="number" placeholder="podaj liczbe nr2" id="input2">
+        <button id="Dodaj1">Dodawanie</button><button id="Odejmij">Odejmowanie</button><button id="Pomnoz">Mnozenie</button>
+        <div id="wynik"></div>
         
     
     </div>
