@@ -22,23 +22,30 @@
         #box2{
             width: 55%;
             background-color: aqua;
-            height: 30%;
             text-align: right;
             padding-top: 200px;
-            margin-left: 45%;
-            text-align: center;
-            font-size: 36pt;
-            margin-top: -11%;
             
+            font-size: 36pt;
+
+
+            margin-top: -11%;
+            margin-bottom: 0%;
+            margin-left: 45%;
+            margin-right: 0;
         }
 
         #box3{
             width: 55%;
-            background-color: crimson;
+            background-color: gray;
             margin-left: 45%;
-            padding-top: 386px;
+            padding-top: 440px;
             text-align: center;
+            margin-bottom: 10%;
         }
+        #wynik{
+            border: 2px solid purple;
+
+        } 
 
     </style>
 
@@ -57,26 +64,32 @@
                     });
                  }
                 });
-             });
+             });            
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-        $(document).ready(function(){
+$(document).ready(function(){
             
-                $("#animacja").click(function(){
-                    for(let i=0; i<=100; i++){
-                        $("#paragraf").fadeIn(500);
-                        $("#paragraf").fadeOut(1000);
-                        $("#paragraf").animate({width:"+=100px"});
-                        $("#paragraf").animate({width:"-=100px"});
-                }
-                });
-            });
+    $("#animacja").click(function(){
+        for(let i=0; i<=100; i++){
+            $("#paragraf").fadeIn(2000);
+            $("#paragraf").fadeOut(1000);
 
 
+        }   
     
+    $("#animacja").click(function(){
+        for(let i=0; i<=100; i++){
+            $("#paragraf1").fadeIn(1000);
+            $("#paragraf1").fadeOut(2000);
+
+        
+        }      
+        });
+    });
+});
 
     </script>
 </head>
-<body bgcolor=gray>
+<body bgcolor=bisque>
     
     <div id="box1">
 
@@ -89,16 +102,27 @@
 <!-------------------------------------------------------------------------------------------------------------------->
     <div id="box2">
 
-        <p id="paragraf">
-            ❤
-            </p>
-            <button id="animacja">KLIKAJ MNIE</button><br>
+        
+            <center>    
+                <p id="paragraf">
+                    ❤
+                    </p>
+                        <button id="animacja">_________________</button><br>
+              
+                    <p id="paragraf1">
+                        ❤
+                        </p>
+
+            
 
     </div>
 <!-------------------------------------------------------------------------------------------------------------------->
     <div id="box3">
 
 
+        <input type="number" placeholder=" podaj liczbe1" id="input1">
+        <input type="number" placeholder=" podaj liczbe2" id="input2">
+        
     
     </div>
 
