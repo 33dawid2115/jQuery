@@ -5,10 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>zad3 - jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("div").mouseover(function(){
+                $(this).addClass("styl1");
+            });
+            $("div").mouseout(function(){
+                $(this).removeClass("styl1");
+            });
+        });
+    </script>
+    <style>
+        .styl1{
+            background-color: bisque;
+            font-size: 24pt;
+            padding: 15px;
+            border: 3px solid purple;
+            border-radius: 20%;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     
-    
+    <div>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui eligendi suscipit deserunt, rerum sunt quod saepe ut maxime quis consequatur quisquam, asperiores ab libero debitis dolores ullam dicta ipsa. Illum.
+    </div>
 
 </body>
 </html>
